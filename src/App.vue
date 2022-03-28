@@ -1,5 +1,5 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router';
+import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
@@ -7,7 +7,7 @@ import { RouterLink, RouterView } from 'vue-router';
 		<div class="wrapper">
 			<nav>
 				<RouterLink to="/">Home</RouterLink>
-				<RouterLink to="/about">About</RouterLink>
+				<!-- <RouterLink to="/score">Score</RouterLink> -->
 			</nav>
 		</div>
 	</header>
@@ -17,4 +17,12 @@ import { RouterLink, RouterView } from 'vue-router';
 
 <style>
 @import '@/assets/base.css';
+header {
+	padding: 20px 0;
+	width: 50%;
+	margin: 0 auto;
+}
+a {
+	padding-right: 30px;
+}
 </style>
