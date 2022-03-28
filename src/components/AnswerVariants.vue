@@ -1,6 +1,6 @@
 
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { Store } from '@/stores/Store'
 
 const props = defineProps({
@@ -13,9 +13,12 @@ const store = Store()
 const allAnswers = computed(() => {
 	return [...props.incorrectAnswers, props.correctAnswer]
 })
-const picked = ref()
+const picked = ref(allAnswers.value[0])
 const pickedStatus = computed(() => {
 	return picked.value == props.correctAnswer
+})
+watch(allAnswers, () => {
+	picked.value = allAnswers.value[0]
 })
 const sendAnswer = value => {
 	store.postAnswerToQuestion(value, picked.value)
@@ -24,7 +27,8 @@ const sendAnswer = value => {
 
 <template>
 	<label v-for="(item, id) in allAnswers" :key="id" :for="item"><input type="radio" :id="item" :value="item" v-model="picked" /> {{ item }}</label>
-	<button @click="sendAnswer(pickedStatus, picked)">answer</button>
+	<br />
+	<button @click="sendAnswer(pickedStatus, picked), resetPicked()">Answer</button>
 </template>
 
 <style>
