@@ -22,7 +22,7 @@ watch(toScore, () => {
 
 <template>
 	<main>
-		<h3>Вопрос:</h3>
+		<h3>Question:</h3>
 		<QuestionChain />
 	</main>
 </template>

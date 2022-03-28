@@ -16,10 +16,7 @@ const question = () => {
 			<div class="category">
 				<span>{{ question()?.category }}</span>
 			</div>
-			<div class="type">
-				<span>type: </span>
-				<span>{{ question()?.type }}</span>
-			</div>
+
 			<div class="difficulty">
 				<span>Difficulty: </span>
 				<span>{{ question()?.difficulty }}</span>
