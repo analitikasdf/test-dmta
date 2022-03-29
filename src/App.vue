@@ -1,28 +1,22 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
-	<header>
-		<div class="wrapper">
-			<nav>
-				<RouterLink to="/">Home</RouterLink>
-				<!-- <RouterLink to="/score">Score</RouterLink> -->
-			</nav>
-		</div>
-	</header>
-
 	<RouterView />
 </template>
 
 <style>
 @import '@/assets/base.css';
-header {
-	padding: 20px 0;
+.about {
 	width: 50%;
 	margin: 0 auto;
 }
 a {
-	padding-right: 30px;
+	text-decoration: none;
+	color: black;
+	padding: 10px;
+	border: 1px solid black;
+	border-radius: 10px;
 }
 </style>

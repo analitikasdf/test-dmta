@@ -1,7 +1,7 @@
 
 <script setup>
 import { Store } from '@/stores/Store'
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed, onMounted, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import QuestionChain from '@/components/QuestionChain.vue'
 

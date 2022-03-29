@@ -16,7 +16,6 @@ const question = computed(() => {
 			<div class="category">
 				<span>{{ question?.category }}</span>
 			</div>
-
 			<div class="difficulty">
 				<span>Difficulty: </span>
 				<span>{{ question?.difficulty }}</span>
@@ -32,7 +31,6 @@ const question = computed(() => {
 				:correct-answer="question?.correct_answer"
 				:incorrect-answers="question?.incorrect_answers"
 			/>
-			<!-- <AnswerVariants :question="question" /> -->
 		</div>
 	</div>
 	<div v-else>loading ...</div>

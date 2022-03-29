@@ -22,7 +22,8 @@ const router = createRouter({
 			path: '/error404',
 			name: 'error',
 			component: ErrorView
-		}
+		},
+		{ path: '/:pathMatch(.*)*', component: ErrorView }
 	]
 })
 
