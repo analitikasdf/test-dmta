@@ -28,7 +28,7 @@ const sendAnswer = value => {
 <template>
 	<label v-for="(item, id) in allAnswers" :key="id" :for="item"><input type="radio" :id="item" :value="item" v-model="picked" /> {{ item }}</label>
 	<br />
-	<button @click="sendAnswer(pickedStatus, picked), resetPicked()">Answer</button>
+	<button @click="sendAnswer(pickedStatus, picked)">Answer</button>
 </template>
 
 <style>

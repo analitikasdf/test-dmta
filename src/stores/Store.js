@@ -24,7 +24,6 @@ export const Store = defineStore('Store', {
 			}
 		},
 		async postAnswerToQuestion(pickedStatus, picked) {
-			console.log(picked, 'picked')
 			this.pickedStatus = pickedStatus
 			this.pickedStatus === true ? (this.correct_answers = this.correct_answers + 1) : (this.incorrect_answers = this.incorrect_answers + 1)
 			try {
